@@ -4,13 +4,25 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <group
-        android:scaleX="2.5"
-        android:scaleY="2.5"
-        android:translateX="24"
-        android:translateY="24">
-        <path
-            android:fillColor="#FF5252"
-            android:pathData="M15,1H9v2h6V1zm-4,13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42,1.42C16.07,4.74 14.12,4 12,4c-4.97,0-9,4.03-9,9s4.02,9 9,9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12,20c-3.87,0-7-3.13-7-7s3.13-7 7-7 7,3.13 7,7-3.13,7-7,7z"/>
-    </group>
+
+    <!-- Subtle Drop Shadow for the button -->
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M 44 32 L 64 32 A 14 14 0 0 1 78 46 L 78 66 A 14 14 0 0 1 64 80 L 44 80 A 14 14 0 0 1 30 66 L 30 46 A 14 14 0 0 1 44 32 Z" />
+
+    <!-- White Rounded Square (Pause Button Base) -->
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M 44 30 L 64 30 A 14 14 0 0 1 78 44 L 78 64 A 14 14 0 0 1 64 78 L 44 78 A 14 14 0 0 1 30 64 L 30 44 A 14 14 0 0 1 44 30 Z" />
+
+    <!-- Left Pause Bar (Red Focus Color) -->
+    <path
+        android:fillColor="#ff5252"
+        android:pathData="M 47 42 A 4 4 0 0 1 51 46 L 51 62 A 4 4 0 0 1 47 66 A 4 4 0 0 1 43 62 L 43 46 A 4 4 0 0 1 47 42 Z" />
+
+    <!-- Right Pause Bar (Teal Break Color) -->
+    <path
+        android:fillColor="#00c6b1"
+        android:pathData="M 61 42 A 4 4 0 0 1 65 46 L 65 62 A 4 4 0 0 1 61 66 A 4 4 0 0 1 57 62 L 57 46 A 4 4 0 0 1 61 42 Z" />
+
 </vector>
