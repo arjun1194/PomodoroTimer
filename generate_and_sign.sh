@@ -10,16 +10,21 @@ echo "======================================"
 echo "Starting Upload Key Generation..."
 echo "======================================"
 
-# Generate the keystore using keytool
-keytool -genkeypair -v \
-  -keystore "$KEYSTORE_PATH" \
-  -alias "$ALIAS" \
-  -keyalg RSA \
-  -keysize 2048 \
-  -validity 10000 \
-  -storepass "$PASS" \
-  -keypass "$PASS" \
-  -dname "CN=Arjun, OU=Dev, O=PomodoroTimer, L=City, S=State, C=US"
+# Generate the keystore using keytool ONLY if it doesn't exist
+if [ ! -f "$KEYSTORE_PATH" ]; then
+    echo "Creating new keystore..."
+    keytool -genkeypair -v \
+      -keystore "$KEYSTORE_PATH" \
+      -alias "$ALIAS" \
+      -keyalg RSA \
+      -keysize 2048 \
+      -validity 10000 \
+      -storepass "$PASS" \
+      -keypass "$PASS" \
+      -dname "CN=Arjun, OU=Dev, O=PomodoroTimer, L=City, S=State, C=US"
+else
+    echo "Using existing keystore found at $KEYSTORE_PATH"
+fi
 
 echo ""
 echo "======================================"
